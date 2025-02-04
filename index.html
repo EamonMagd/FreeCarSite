@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Free Car</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1a1a1a;
+            padding: 50px;
+            color: white;
+        }
+
+        .container {
+            background: #ff3333;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(255,0,0,0.5);
+            display: inline-block;
+        }
+
+        button {
+            background-color: #990000;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #cc0000;
+            transform: scale(1.1);
+        }
+    </style>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_MEASUREMENT_ID');
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Get a Free Car Today!</h1>
+        <p>Click the button below to claim your free car now.</p>
+        <button id="claimButton">Claim Your Free Car</button>
+    </div>
+
+    <script>
+        document.getElementById("claimButton").addEventListener("click", function() {
+            gtag('event', 'click', {
+                'event_category': 'Button',
+                'event_label': 'Claim Free Car'
+            });
+            alert("Your free car claim is being processed!");
+        });
+    </script>
+</body>
+</html>
